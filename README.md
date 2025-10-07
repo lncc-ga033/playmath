@@ -1,5 +1,5 @@
 
-# Math Ops Classroom Template
+# `playmath`: um playground para exercício
 
 Repositório simples para exercitar fluxo de trabalho com **Git/GitHub** (branch, commit, PR, code review e CI) usando Python, `pytest`, `ruff` e `mypy`.
 
