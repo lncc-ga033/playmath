@@ -1,6 +1,6 @@
 import math
 
-from playmath import add
+from playmath.basic import add
 
 
 def test_add_integers():

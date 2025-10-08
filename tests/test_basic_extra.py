@@ -1,5 +1,5 @@
 # Exemplo de como estruturar novos testes.
-# Dica: crie casos simples e alguns de borda (edge cases).
+# Dica: crie casos simples e alguns extremos (edge cases).
 
 
 def test_subtract_basic():
