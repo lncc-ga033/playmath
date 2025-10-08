@@ -1,7 +1,7 @@
 
 import math
 import pytest
-from mathlib import (
+from playmath import (
     subtract, multiply, divide, power, sqrt, factorial, is_prime,
     gcd, lcm, mean, median, variance,
 )

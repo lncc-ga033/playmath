@@ -22,7 +22,7 @@ Repositório simples para exercitar fluxo de trabalho com **Git/GitHub** (branch
    ruff check .
    mypy src
    ```
-3. **Implemente uma função** em `src/mathlib/basic.py` (edite a docstring se necessário) e
+3. **Implemente uma função** em `src/playmath/basic.py` (edite a docstring se necessário) e
    **crie seus testes** em `tests/test_basic_extra.py` (você pode copiar o estilo de `tests/test_add.py`).  
    Abra um **PR** com o título `feat: implement <nome-da-funcao>` e marque a checklist.
 
@@ -73,7 +73,7 @@ pytest --cov=src --cov-report=term-missing
 │   └── workflows/
 │       └── ci.yml
 ├── src/
-│   └── mathlib/
+│   └── playmath/
 │       ├── __init__.py
 │       └── basic.py
 └── tests/
