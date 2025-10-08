@@ -1,7 +1,6 @@
-
 from __future__ import annotations
-from math import isclose, sqrt as _sqrt
-from typing import Iterable, Sequence
+
+from collections.abc import Sequence
 
 
 def add(a: float, b: float) -> float:
