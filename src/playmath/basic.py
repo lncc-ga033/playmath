@@ -89,24 +89,7 @@ def median(data: Sequence[float]) -> float:
 
 def variance(data: Sequence[float], *, sample: bool = False) -> float:
     """
-    Variância.
-
-    Parameters
-    ----------
-    data : Sequence[float]
-        Amostras numéricas.
-    sample : bool, default False
-        Se True, usa variância amostral (denominador n-1).
-        Caso contrário, variância populacional (denominador n).
-
-    Raises
-    ------
-    ValueError
-        Se data tiver tamanho < 1 (população) ou < 2 (amostra).
-
-    Returns
-    -------
-    float
-        Variância da sequência.
+    Variância. Levanta ValueError se data tiver menos de 2 elementos.
+    Se sample for True, calcula a variância amostral (dividindo por n-1).
     """
     raise NotImplementedError

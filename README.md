@@ -14,7 +14,7 @@ Repositório simples para exercitar fluxo de trabalho com **Git/GitHub** (branch
    ```bash
    python -m venv .venv
    source .venv/bin/activate  # no Windows: .venv\Scripts\activate
-   pip install -r requirements-dev.txt
+   pip install -e .
    ```
 2. **Rode os testes e linters** localmente:
    ```bash
