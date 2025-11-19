@@ -59,7 +59,7 @@ No arquivo `src/playmath/basic.py`:
 
 ### Avaliação
 
-A pontuação do Assignment é baseada nos testes unitários de cada função. Se todos os 8 testes passarem, a solução do Assignment recebe nota máxima.
+A pontuação do Assignment é baseada nos testes unitários de cada função. Se todos os testes passarem, a solução do Assignment recebe nota máxima.
 
 A função `add(a, b)` já está implementada como **exemplo completo** e cobre o fluxo inteiro (docstring, type hints, teste).
 
