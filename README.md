@@ -1,6 +1,8 @@
 
 # `playmath`: um playground para exercício no Github Classroom
 
+[![Tests](https://github.com/lncc-ga033/playmath/actions/workflows/tests.yml/badge.svg)](https://github.com/lncc-ga033/playmath/actions/workflows/tests.yml)
+
 Repositório simples para exercitar fluxo de trabalho com **Git/GitHub** (branch, commit, PR, code review e CI) usando Python, `pytest`, `ruff` e `mypy`.
 
 ## Objetivo
