@@ -28,11 +28,14 @@ dependencies = [
 package-dir = { "" = "src" }
 
 [tool.setuptools.packages.find]
-# look under src/ for any packages matching "mypackage*"
+# look under src/ for any packages matching "playmath*"
 where  = ["src"]
 include = ["playmath*"]
 
 [tool.pytest.ini_options]
 minversion = "8.0"
-addopts = "-q"
+addopts = ". -q -v -m 'not grading'"
 testpaths = ["tests"]
+markers = [
+  "grading: tests used for grading student assignments",
+]

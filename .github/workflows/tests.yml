@@ -1,18 +1,23 @@
 
-name: CI
+name: Tests
 
 on:
   push:
-    branches: ["main"]
+    branches:
+      - main
+
   pull_request:
-    branches: ["main"]
+    types: [ "opened", "synchronize", "reopened", "labeled", "unlabeled" ]
+    branches: [ "main" ]
+
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ["3.10", "3.11", "3.12"]
+        python-version: ["3.12"]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5

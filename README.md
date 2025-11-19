@@ -1,5 +1,5 @@
 
-# `playmath`: um playground para exercício
+# `playmath`: um playground para exercício no Github Classroom
 
 Repositório simples para exercitar fluxo de trabalho com **Git/GitHub** (branch, commit, PR, code review e CI) usando Python, `pytest`, `ruff` e `mypy`.
 
@@ -28,7 +28,7 @@ Repositório simples para exercitar fluxo de trabalho com **Git/GitHub** (branch
    ```
 4. **Rode os testes e linters** localmente:
    ```bash
-   pytest -q
+   pytest
    ruff check .
    mypy src
    ```
@@ -43,7 +43,9 @@ Repositório simples para exercitar fluxo de trabalho com **Git/GitHub** (branch
 - 1 PR por função (ou no máximo 2) com testes e docstrings atualizadas.
 - CI precisa passar (ruff, mypy, pytest).
 
-## Funções a implementar (8 TODOs)
+## Atividade
+
+### Funções a implementar (8 TODOs)
 
 No arquivo `src/mathlib/basic.py`:
 1. `subtract(a, b) -> float`
@@ -55,14 +57,19 @@ No arquivo `src/mathlib/basic.py`:
 7. `is_prime(n) -> bool`
 8.  `mean(data) -> float` (ValueError se vazio)
 
+### Avaliação
+
 A pontuação do Assignment é baseada nos testes unitários de cada função. Se todos os 8 testes passarem, a solução do Assignment recebe nota máxima.
 
 A função `add(a, b)` já está implementada como **exemplo completo** e cobre o fluxo inteiro (docstring, type hints, teste).
 
-## Executando cobertura (opcional)
+Para avaliar sua performance e saber o seu progresso, execute em seu terminal:
+
 ```bash
-pytest --cov=src --cov-report=term-missing
+pytest -m grading
 ```
+
+Esse comando executa apenas os testes que são utilizados para avaliar a nota do Assignment. Não se esqueça de rodar ele no diretório raiz do projeto e com o ambiente virtual ativado!
 
 ## Estrutura
 ```
