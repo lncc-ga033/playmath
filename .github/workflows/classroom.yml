@@ -16,27 +16,6 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
-      # This is where you place your autograding tests
-      # For more information on this runner, see the documentation at: https://github.com/classroom-resources/autograding-io-grader
-      #
-      # For example, you could run a test suite like this:
-    - name: Run tests
-      id: grading_test
-      uses: classroom-resources/autograding-command-grader@v1
-      with:
-        test-name: 'grading'
-        setup-command: |
-          python -m pip install --upgrade pip
-          pip install -e .
-        command: "pytest -m grading"
-        timeout: 600
-        max-score: 100
 
-    - name: Autograding Reporter
-      uses: classroom-resources/autograding-grading-reporter@v1
-      # For more information on this runner, see the documentation at https://github.com/classroom-resources/autograding-grading-reporter
-      # To output the results of the tests, you can use the
-      env:
-        AUTOGRADING_TEST_RESULTS: ${{ steps.grading_test.outputs.result }}
-      with:
-        runners: 'grading'
+    - name: Autograding
+      uses: education/autograding@v1

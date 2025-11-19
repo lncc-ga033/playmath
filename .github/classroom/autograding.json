@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "grading",
+      "setup": "pip install -e .",
+      "run": "pytest -m grading",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 600,
+      "points": 100
+    }
+  ]
+}
