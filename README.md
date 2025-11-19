@@ -6,7 +6,7 @@ Repositório simples para exercitar fluxo de trabalho com **Git/GitHub** (branch
 ## Objetivo
 
 - Exemplo completo pronto: `add(a, b)` já implementada, tipada, documentada e com teste.
-- **12 tarefas** (funções) para os alunos implementarem em **PRs** pequenos (1–2 funções + testes por PR).
+- **8 tarefas** (funções) para os alunos implementarem em **PRs** pequenos (1–2 funções + testes por PR).
 
 ## Como usar
 
