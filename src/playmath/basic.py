@@ -67,46 +67,6 @@ def is_prime(n: int) -> bool:
     raise NotImplementedError
 
 
-def gcd(a: int, b: int) -> int:
-    """Máximo divisor comum (resultado não negativo)."""
-    raise NotImplementedError
-
-
-def lcm(a: int, b: int) -> int:
-    """Mínimo múltiplo comum (resultado não negativo)."""
-    raise NotImplementedError
-
-
 def mean(data: Sequence[float]) -> float:
     """Média aritmética. Levanta ValueError se data estiver vazia."""
-    raise NotImplementedError
-
-
-def median(data: Sequence[float]) -> float:
-    """Mediana. Levanta ValueError se data estiver vazia."""
-    raise NotImplementedError
-
-
-def variance(data: Sequence[float], *, sample: bool = False) -> float:
-    """
-    Variância.
-
-    Parameters
-    ----------
-    data : Sequence[float]
-        Amostras numéricas.
-    sample : bool, default False
-        Se True, usa variância amostral (denominador n-1).
-        Caso contrário, variância populacional (denominador n).
-
-    Raises
-    ------
-    ValueError
-        Se data tiver tamanho < 1 (população) ou < 2 (amostra).
-
-    Returns
-    -------
-    float
-        Variância da sequência.
-    """
     raise NotImplementedError

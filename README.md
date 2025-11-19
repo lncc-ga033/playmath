@@ -1,44 +1,53 @@
 
-# `playmath`: um playground para exercício
+# `playmath`: um playground para exercício no Github Classroom
 
 Repositório simples para exercitar fluxo de trabalho com **Git/GitHub** (branch, commit, PR, code review e CI) usando Python, `pytest`, `ruff` e `mypy`.
 
 ## Objetivo
 
 - Exemplo completo pronto: `add(a, b)` já implementada, tipada, documentada e com teste.
-- **12 tarefas** (funções) para os alunos implementarem em **PRs** pequenos (1–2 funções + testes por PR).
+- **8 tarefas** (funções) para os alunos implementarem em **PRs** pequenos (1–2 funções + testes por PR).
 
-## Como usar (alunos)
+## Como usar
 
-1. **Crie um ambiente** (recomendado Python ≥ 3.10):
+1. **Crie um ambiente** (recomendado Python >= 3.12):
    ```bash
+   # Esse comando cria um ambiente virtual chamado .venv
+   # O ambiente será um diretório de mesmo nome
    python -m venv .venv
+   # O comando abaixo ativa o ambiente virtual no seu terminal
    source .venv/bin/activate  # no Windows: .venv\Scripts\activate
-   pip install -r requirements-dev.txt
    ```
-2. **Rode os testes e linters** localmente:
+2. **Instale as dependências do projeto dentro do ambiente virtual**:
    ```bash
-   pytest -q
-   ruff check .
-   mypy src
+   pip install -e .
    ```
-3. **Implemente uma função** em `src/playmath/basic.py` (edite a docstring se necessário) e
-   **crie seus testes** em `tests/test_basic_extra.py` (você pode copiar o estilo de `tests/test_add.py`).
-   Abra um **PR** com o título `feat: implement <nome-da-funcao>` e marque a checklist.
-
-4. (Opcional) **pre-commit**:
+3. **Instale os checkers e formatadores automáticos via pre-commit**:
    ```bash
    pre-commit install
    ```
+4. **Rode os testes e linters** localmente:
+   ```bash
+   pytest
+   ruff check .
+   mypy src
+   ```
+5. **Implemente uma função** em `src/playmath/basic.py` (edite a docstring se necessário) e
+   **crie seus testes** em `tests/test_basic_extra.py` (você pode copiar o estilo de `tests/test_add.py`).
+   Abra um **PR** com um título informativo. Exemplo: `Implement functions X, Y, Z, etc` e marque a checklist.
+
+**Note:** toda vez que for trabalhar no `playmath`, você deve ativar o ambiente virtual de trabalho, que no caso é o `.venv`. Se for utilizar o VS Code, você também deve selecionar o interpretador Python contido nesse ambiente virtual.
 
 ## Fluxo sugerido de PR
 
 - 1 PR por função (ou no máximo 2) com testes e docstrings atualizadas.
 - CI precisa passar (ruff, mypy, pytest).
 
-## Funções a implementar (12 TODOs)
+## Atividade
 
-No arquivo `src/mathlib/basic.py`:
+### Funções a implementar (8 TODOs)
+
+No arquivo `src/playmath/basic.py`:
 1. `subtract(a, b) -> float`
 2. `multiply(a, b) -> float`
 3. `divide(a, b) -> float` (ZeroDivisionError para b = 0)
@@ -46,18 +55,21 @@ No arquivo `src/mathlib/basic.py`:
 5. `sqrt(x) -> float` (ValueError se x < 0)
 6. `factorial(n) -> int` (ValueError se n < 0 ou não inteiro)
 7. `is_prime(n) -> bool`
-8. `gcd(a, b) -> int`  (resultado não negativo)
-9. `lcm(a, b) -> int`  (resultado não negativo)
-10. `mean(data) -> float` (ValueError se vazio)
-11. `median(data) -> float` (ValueError se vazio)
-12. `variance(data, sample=False) -> float` (ValueError se len < 1 para população; < 2 para amostra)
+8.  `mean(data) -> float` (ValueError se vazio)
+
+### Avaliação
+
+A pontuação do Assignment é baseada nos testes unitários de cada função. Se todos os testes passarem, a solução do Assignment recebe nota máxima.
 
 A função `add(a, b)` já está implementada como **exemplo completo** e cobre o fluxo inteiro (docstring, type hints, teste).
 
-## Executando cobertura (opcional)
+Para avaliar sua performance e saber o seu progresso, execute em seu terminal:
+
 ```bash
-pytest --cov=src --cov-report=term-missing
+pytest -m grading
 ```
+
+Esse comando executa apenas os testes que são utilizados para avaliar a nota do Assignment. Não se esqueça de rodar ele no diretório raiz do projeto e com o ambiente virtual ativado!
 
 ## Estrutura
 ```

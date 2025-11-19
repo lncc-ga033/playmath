@@ -4,7 +4,7 @@ name = "playmath"
 version = "0.1.0"
 description = "Template de exercícios de Git/GitHub com operações matemáticas em Python."
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.12"
 authors = [{name = "Diego Volpatto", email = "volpatto@lncc.br"}]
 license = "MIT"
 
@@ -20,6 +20,7 @@ dependencies = [
   "ruff>=0.5.0",
   "mypy>=1.10.0",
   "pre-commit>=3.7.0",
+  "numpy>=1.24.0",
 ]
 
 [tool.setuptools]
@@ -27,11 +28,14 @@ dependencies = [
 package-dir = { "" = "src" }
 
 [tool.setuptools.packages.find]
-# look under src/ for any packages matching "mypackage*"
+# look under src/ for any packages matching "playmath*"
 where  = ["src"]
 include = ["playmath*"]
 
 [tool.pytest.ini_options]
 minversion = "8.0"
-addopts = "-q"
+addopts = "-q -v -m 'not grading'"
 testpaths = ["tests"]
+markers = [
+  "grading: tests used for grading student assignments",
+]
