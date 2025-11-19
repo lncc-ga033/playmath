@@ -4,7 +4,7 @@ name = "playmath"
 version = "0.1.0"
 description = "Template de exercícios de Git/GitHub com operações matemáticas em Python."
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.12"
 authors = [{name = "Diego Volpatto", email = "volpatto@lncc.br"}]
 license = "MIT"
 
