@@ -1,8 +1,8 @@
 {
   "tests": [
     {
-      "name": "pytest",
-      "setup": "python -m pip install --upgrade pip && pip install -e .",
+      "name": "grading",
+      "setup": "pip install -e .",
       "run": "pytest -m grading",
       "input": "",
       "output": "",
@@ -10,6 +10,5 @@
       "timeout": 600,
       "points": 100
     }
-  ],
-  "version": 0
+  ]
 }
