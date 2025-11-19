@@ -22,7 +22,7 @@ Repositório simples para exercitar fluxo de trabalho com **Git/GitHub** (branch
    ```bash
    pip install -e .
    ```
-3. **Instale os checker e formatadores automáticos via pre-commit**:
+3. **Instale os checkers e formatadores automáticos via pre-commit**:
    ```bash
    pre-commit install
    ```
