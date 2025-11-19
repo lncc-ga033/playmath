@@ -47,7 +47,7 @@ Repositório simples para exercitar fluxo de trabalho com **Git/GitHub** (branch
 
 ### Funções a implementar (8 TODOs)
 
-No arquivo `src/mathlib/basic.py`:
+No arquivo `src/playmath/basic.py`:
 1. `subtract(a, b) -> float`
 2. `multiply(a, b) -> float`
 3. `divide(a, b) -> float` (ZeroDivisionError para b = 0)
