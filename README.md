@@ -10,7 +10,7 @@ Repositório simples para exercitar fluxo de trabalho com **Git/GitHub** (branch
 
 ## Como usar
 
-1. **Crie um ambiente** (recomendado Python >= 3.10):
+1. **Crie um ambiente** (recomendado Python >= 3.12):
    ```bash
    # Esse comando cria um ambiente virtual chamado .venv
    # O ambiente será um diretório de mesmo nome
@@ -22,7 +22,7 @@ Repositório simples para exercitar fluxo de trabalho com **Git/GitHub** (branch
    ```bash
    pip install -e .
    ```
-3. **Instale os checker e formatadores automáticos via pre-commit**:
+3. **Instale os checkers e formatadores automáticos via pre-commit**:
    ```bash
    pre-commit install
    ```
@@ -34,7 +34,7 @@ Repositório simples para exercitar fluxo de trabalho com **Git/GitHub** (branch
    ```
 5. **Implemente uma função** em `src/playmath/basic.py` (edite a docstring se necessário) e
    **crie seus testes** em `tests/test_basic_extra.py` (você pode copiar o estilo de `tests/test_add.py`).
-   Abra um **PR** com o título informativo. Exemplo: `Implement functions X, Y, Z, etc` e marque a checklist.
+   Abra um **PR** com um título informativo. Exemplo: `Implement functions X, Y, Z, etc` e marque a checklist.
 
 **Note:** toda vez que for trabalhar no `playmath`, você deve ativar o ambiente virtual de trabalho, que no caso é o `.venv`. Se for utilizar o VS Code, você também deve selecionar o interpretador Python contido nesse ambiente virtual.
 
