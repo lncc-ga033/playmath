@@ -34,7 +34,7 @@ include = ["playmath*"]
 
 [tool.pytest.ini_options]
 minversion = "8.0"
-addopts = ". -q -v -m 'not grading'"
+addopts = "-q -v -m 'not grading'"
 testpaths = ["tests"]
 markers = [
   "grading: tests used for grading student assignments",
