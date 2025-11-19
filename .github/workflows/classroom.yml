@@ -1,4 +1,4 @@
-name: GitHub Classroom Workflow
+name: Autograding Tests
 
 on:
   - push
@@ -10,10 +10,35 @@ permissions:
   contents: read
 
 jobs:
-  build:
-    name: Autograding
+  run-autograding-tests:
     runs-on: ubuntu-latest
     if: github.actor != 'github-classroom[bot]'
     steps:
-      - uses: actions/checkout@v4
-      - uses: education/autograding@v1
+    - name: Checkout code
+      uses: actions/checkout@v4
+      # This is where you place your autograding tests
+      # For more information on this runner, see the documentation at: https://github.com/classroom-resources/autograding-io-grader
+      #
+      # For example, you could run a test suite like this:
+    - name: Run tests
+      id: grading_test
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: Autograding Test
+        setup-command: |
+          python -m pip install --upgrade pip
+          pip install -e .
+        command: "pytest -m grading"
+        expected-output: ""
+        comparison-method: included
+        timeout: 10
+        max-score: 100
+
+    - name: Autograding Reporter
+      uses: classroom-resources/autograding-grading-reporter@v1
+      # For more information on this runner, see the documentation at https://github.com/classroom-resources/autograding-grading-reporter
+      # To output the results of the tests, you can use the
+      env:
+        AUTOGRADING_TEST_RESULTS: ${{ steps.grading_test.outputs.result }}
+      with:
+        runners: autograding-test
