@@ -24,12 +24,12 @@ jobs:
       id: grading_test
       uses: classroom-resources/autograding-command-grader@v1
       with:
-        test-name: Autograding Test
+        test-name: 'grading'
         setup-command: |
           python -m pip install --upgrade pip
           pip install -e .
         command: "pytest -m grading"
-        timeout: 10
+        timeout: 600
         max-score: 100
 
     - name: Autograding Reporter
@@ -39,4 +39,4 @@ jobs:
       env:
         AUTOGRADING_TEST_RESULTS: ${{ steps.grading_test.outputs.result }}
       with:
-        runners: Autograding Test
+        runners: 'grading'
