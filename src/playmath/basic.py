@@ -123,7 +123,7 @@ def power(base: float, exp: float) -> float:
     Returns
     -------
     float
-        A potencia base ^ expoente.
+        O resultado de: base ^ expoente.
 
     Examples
     --------
