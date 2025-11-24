@@ -4,21 +4,21 @@
 
 import pytest
 
-from playmath.basic import subtract
+from playmath.basic import multiply, subtract
 
 
 @pytest.mark.grading
 def test_subtract_basic():
     """Teste Básico para a função subtract"""
-    #
     assert subtract(2, 3) == 1.0
     assert subtract(-1.5, 0.5) == 2.0
 
 
 @pytest.mark.grading
 def test_multiply_basic():
-    # TODO: implemente o corpo após implementar a função
-    assert False  # Remova esta linha quando implementar o teste
+    """Teste Básico para a função multiply"""
+    assert multiply(2, 3) == 6.0
+    assert multiply(-1.5, 0.5) == -0.75
 
 
 @pytest.mark.grading

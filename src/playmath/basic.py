@@ -56,8 +56,29 @@ def subtract(a: float, b: float) -> float:
 
 
 def multiply(a: float, b: float) -> float:
-    """Multiplica a por b."""
-    raise NotImplementedError
+    """
+    Multiplica dois números, ou seja: a * b.
+
+    Parameters
+    ----------
+    a : float
+        Primeiro operando.
+    b : float
+        Segundo operando.
+
+    Returns
+    -------
+    float
+        A multiplicação a * b.
+
+    Examples
+    --------
+    >>> multiply(2, 3)
+    6.0
+    >>> multiply(-1.5, 0.5)
+    -0.75
+    """
+    return float(a) * float(b)
 
 
 def divide(a: float, b: float) -> float:
