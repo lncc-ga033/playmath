@@ -4,7 +4,7 @@
 
 import pytest
 
-from playmath.basic import divide, factorial, multiply, power, sqrt, subtract
+from playmath.basic import divide, factorial, is_prime, multiply, power, sqrt, subtract
 
 
 @pytest.mark.grading
@@ -65,8 +65,9 @@ def test_factorial_basic():
 
 @pytest.mark.grading
 def test_is_prime_basic():
-    # TODO: implemente o corpo após implementar a função
-    assert False  # Remova esta linha quando implementar o teste
+    """Teste Básico para a função is_prime"""
+    assert is_prime(4) is False
+    assert is_prime(3) is True
 
 
 @pytest.mark.grading

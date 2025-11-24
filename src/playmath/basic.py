@@ -191,8 +191,29 @@ def factorial(n: int) -> int:
 
 
 def is_prime(n: int) -> bool:
-    """Retorna True se n é primo, False caso contrário."""
-    raise NotImplementedError
+    """
+    Verifica se o valor n é primo ou não.
+
+    Parameters
+    ----------
+    n : int
+        Valor a ser verificado.
+
+    Returns
+    -------
+    bool
+        Retorna False ou True.
+
+    Examples
+    --------
+    >>> is_prime(4)
+    Falso
+    >>> is_prime(3)
+    Verdadeiro
+    """
+    if n <= 1:
+        return False
+    return all(n % i != 0 for i in range(2, int(n**0.5) + 1))
 
 
 def mean(data: Sequence[float]) -> float:
