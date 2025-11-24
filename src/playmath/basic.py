@@ -111,19 +111,19 @@ def divide(a: float, b: float) -> float:
 
 def power(base: float, exp: float) -> float:
     """
-    Calcula a base elevada ao expoente, ou seja: a ^ b.
+    Calcula a base elevada ao expoente, ou seja: base ^ expoente.
 
     Parameters
     ----------
-    a : float
+    base : float
         Base.
-    b : float
+    exp : float
         Expoente.
 
     Returns
     -------
     float
-        A potencia a ^ b.
+        A potencia base ^ expoente.
 
     Examples
     --------
@@ -136,8 +136,29 @@ def power(base: float, exp: float) -> float:
 
 
 def sqrt(x: float) -> float:
-    """Raiz quadrada de x. Levanta ValueError se x < 0."""
-    raise NotImplementedError
+    """
+    Calcula raiz quadrada de x, ou seja: sqrt(x). Levanta ValueError se x < 0
+
+    Parameters
+    ----------
+    x : float
+        Valor a ser elevado a 0.5.
+
+    Returns
+    -------
+    float
+        A raiz quadrada de x.
+
+    Examples
+    --------
+    >>> sqrt(4)
+    2.0
+    >>> sqrt(9)
+    3.0
+    """
+    if x < 0:
+        raise ValueError("Erro, tome x > 0 para obter a raiz quadrada")
+    return x**0.5
 
 
 def factorial(n: int) -> int:

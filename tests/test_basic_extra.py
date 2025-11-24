@@ -4,7 +4,7 @@
 
 import pytest
 
-from playmath.basic import divide, multiply, power, subtract
+from playmath.basic import divide, multiply, power, sqrt, subtract
 
 
 @pytest.mark.grading
@@ -44,16 +44,16 @@ def test_power_basic():
 
 @pytest.mark.grading
 def test_sqrt_basic():
-    # TODO: implemente o corpo após implementar a função
-    assert False  # Remova esta linha quando implementar o teste
+    """Teste Básico para a função sqrt"""
+    assert sqrt(4) == 2.0
+    assert sqrt(9) == 3.0
 
 
 @pytest.mark.grading
 def test_sqrt_negative():
-    # TODO: implemente o corpo após implementar a função
-    # with pytest.raises(ValueError):
-    #     sqrt(-1.0)
-    assert False  # Remova esta linha quando implementar o teste
+    """Teste Básico para a função sqrt para valores negativos"""
+    with pytest.raises(ValueError):
+        sqrt(-1)
 
 
 @pytest.mark.grading
