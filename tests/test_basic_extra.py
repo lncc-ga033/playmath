@@ -4,7 +4,7 @@
 
 import pytest
 
-from playmath.basic import divide, factorial, is_prime, multiply, power, sqrt, subtract
+from playmath.basic import divide, factorial, is_prime, mean, multiply, power, sqrt, subtract
 
 
 @pytest.mark.grading
@@ -72,5 +72,5 @@ def test_is_prime_basic():
 
 @pytest.mark.grading
 def test_mean_basic():
-    # TODO: implemente o corpo após implementar a função
-    assert False  # Remova esta linha quando implementar o teste
+    """Teste Básico para a função mean"""
+    assert mean([5.0, 4.0, 3.0, 2.0, 1.0]) == 3.0

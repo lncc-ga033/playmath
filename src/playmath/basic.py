@@ -217,5 +217,24 @@ def is_prime(n: int) -> bool:
 
 
 def mean(data: Sequence[float]) -> float:
-    """Média aritmética. Levanta ValueError se data estiver vazia."""
-    raise NotImplementedError
+    """
+    Calcula a média aritmética. Levanta ValueError se data estiver vazia.
+
+    Parameters
+    ----------
+    data : Sequence[float]
+        Valores a serem adicionados em data.
+
+    Returns
+    -------
+    float
+        Retorna a soma aritmética dos valores que estão em data.
+
+    Examples
+    --------
+    >>> mean([5.0, 4.0, 3.0, 2.0, 1.0])
+    3.0
+    """
+    if len(data) == 0:
+        raise ValueError("Erro, data está vazia.")
+    return sum(data) / len(data)
