@@ -4,7 +4,7 @@
 
 import pytest
 
-from playmath.basic import multiply, subtract
+from playmath.basic import divide, multiply, subtract
 
 
 @pytest.mark.grading
@@ -23,8 +23,16 @@ def test_multiply_basic():
 
 @pytest.mark.grading
 def test_divide_basic():
-    # TODO: implemente o corpo após implementar a função
-    assert False  # Remova esta linha quando implementar o teste
+    """Teste Básico para a função divide"""
+    assert divide(4, 2) == 2.0
+    assert divide(-6, 2) == -3.0
+
+
+@pytest.mark.grading
+def test_divide_zero():
+    """Teste Básico para a função divide com o teste de divisao por zero"""
+    with pytest.raises(ZeroDivisionError):
+        divide(4, 0)
 
 
 @pytest.mark.grading

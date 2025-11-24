@@ -82,8 +82,31 @@ def multiply(a: float, b: float) -> float:
 
 
 def divide(a: float, b: float) -> float:
-    """Divide a por b. Levanta ZeroDivisionError se b == 0."""
-    raise NotImplementedError
+    """
+    Divide dois números, ou seja: a / b. Levanta ZeroDivisionError se b == 0.
+
+    Parameters
+    ----------
+    a : float
+        Dividendo.
+    b : float
+        Divisor.
+
+    Returns
+    -------
+    float
+        A Divisão a / b. Levanta ZeroDivisionError se b == 0.
+
+    Examples
+    --------
+    >>> divide(4, 2)
+    2.0
+    >>> divide(-6, 2)
+    -3.0
+    """
+    if b == 0:
+        raise ZeroDivisionError("Indeterminacao")
+    return float(a) / float(b)
 
 
 def power(base: float, exp: float) -> float:
