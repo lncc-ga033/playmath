@@ -29,19 +29,10 @@ def test_divide_basic():
 
 
 @pytest.mark.grading
-def test_divide_zero():
+def test_divide_by_zero():
     """Teste Básico para a função divide com o teste de divisao por zero"""
     with pytest.raises(ZeroDivisionError):
         divide(4, 0)
-
-
-@pytest.mark.grading
-def test_divide_by_zero():
-    # TODO: implemente o corpo após implementar a função
-    # Sugestão de uso do pytest para checar exceções
-    # with pytest.raises(ZeroDivisionError):
-    #     divide(1, 0)
-    assert False  # Remova esta linha quando implementar o teste
 
 
 @pytest.mark.grading
