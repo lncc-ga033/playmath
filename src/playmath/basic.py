@@ -163,10 +163,31 @@ def sqrt(x: float) -> float:
 
 def factorial(n: int) -> int:
     """
-    Fatorial de n (n!).
-    - n deve ser inteiro não negativo, caso contrário levanta ValueError.
+    Calcula o Fatorial de n, ou seja: n!. Levanta ValueError se n não for inteiro negativo
+
+    Parameters
+    ----------
+    n : int
+        Valor a ser calculado o fatorial.
+
+    Returns
+    -------
+    int
+        O resultado do fatorial do n.
+
+    Examples
+    --------
+    >>> factorial(4)
+    24
+    >>> factorial(3)
+    6
     """
-    raise NotImplementedError
+    if n < 0 or n != int(n):
+        raise ValueError("Erro, número não inteiro e negativo.")
+    fatorial = 1
+    for i in range(2, n + 1):
+        fatorial *= i
+    return int(fatorial)
 
 
 def is_prime(n: int) -> bool:

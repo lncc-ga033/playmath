@@ -4,7 +4,7 @@
 
 import pytest
 
-from playmath.basic import divide, multiply, power, sqrt, subtract
+from playmath.basic import divide, factorial, multiply, power, sqrt, subtract
 
 
 @pytest.mark.grading
@@ -58,8 +58,9 @@ def test_sqrt_negative():
 
 @pytest.mark.grading
 def test_factorial_basic():
-    # TODO: implemente o corpo após implementar a função
-    assert False  # Remova esta linha quando implementar o teste
+    """Teste Básico para a função factorial"""
+    assert factorial(4) == 24
+    assert factorial(3) == 6
 
 
 @pytest.mark.grading
