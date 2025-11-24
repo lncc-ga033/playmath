@@ -110,8 +110,29 @@ def divide(a: float, b: float) -> float:
 
 
 def power(base: float, exp: float) -> float:
-    """Retorna base ** exp."""
-    raise NotImplementedError
+    """
+    Calcula a base elevada ao expoente, ou seja: a ^ b.
+
+    Parameters
+    ----------
+    a : float
+        Base.
+    b : float
+        Expoente.
+
+    Returns
+    -------
+    float
+        A potencia a ^ b.
+
+    Examples
+    --------
+    >>> power(2, 3)
+    8.0
+    >>> power(-2, 3)
+    -8.0
+    """
+    return base**exp
 
 
 def sqrt(x: float) -> float:

@@ -4,7 +4,7 @@
 
 import pytest
 
-from playmath.basic import divide, multiply, subtract
+from playmath.basic import divide, multiply, power, subtract
 
 
 @pytest.mark.grading
@@ -37,8 +37,9 @@ def test_divide_by_zero():
 
 @pytest.mark.grading
 def test_power_basic():
-    # TODO: implemente o corpo após implementar a função
-    assert False  # Remova esta linha quando implementar o teste
+    """Teste Básico para a função power"""
+    assert power(2, 3) == 8.0
+    assert power(-2, 3) == -8.0
 
 
 @pytest.mark.grading
