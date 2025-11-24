@@ -30,8 +30,29 @@ def add(a: float, b: float) -> float:
 
 
 def subtract(a: float, b: float) -> float:
-    """Subtrai b de a."""
-    raise NotImplementedError
+    """
+    Subtrai dois números, ou seja: b - a.
+
+    Parameters
+    ----------
+    a : float
+        Segundo operando.
+    b : float
+        Primeiro operando.
+
+    Returns
+    -------
+    float
+        A subtração b - a.
+
+    Examples
+    --------
+    >>> subtract(2, 3)
+    1.0
+    >>> subtract(-1.5, 0.5)
+    2.0
+    """
+    return float(b) - float(a)
 
 
 def multiply(a: float, b: float) -> float:
